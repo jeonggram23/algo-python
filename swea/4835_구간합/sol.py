@@ -7,19 +7,26 @@ for tc in range(1, T+1):
     N, M = map(int, input().split())
     
     numbers = list(map(int, input().split()))
-    
-    
+
     result = []
+    
+    
 
 
 
     for idx, number in enumerate(numbers):
-        result.append(sum(numbers[idx:idx+M]))
+        # result.append(sum(numbers[idx:idx+M])) 
         if idx > N-M:
-            result.append(sum(numbers[idx:idx+M]))+10
-            # result.append(sum(numbers[idx:idx+M], numbers[:idx-(N-M+1)]))
-    # else:
-    #     result.append(sum(numbers[idx:idx+M])
+            
+            # result.append(sum(numbers[idx:idx+M]))
+            # result.append(sum(numbers[idx:idx+M], numbers[:idx-(N-M)]))
+            # result.append(sum(numbers[idx:(idx+M)], numbers[:(N-idx)]))
+            # result.append(sum(numbers[idx:idx+M])) + result.append(sum(numbers[:idx-(N-M+1)]))
+            end = numbers[idx:(idx+M)]
+            start = numbers[:M-len(end)]
+            result.append(str(sum(end+start)))
+        else:
+            result.append(sum(numbers[idx:idx+M]))
 
     print(result)
 

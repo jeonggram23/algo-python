@@ -56,3 +56,25 @@ for row in matrix:
         
         if item == 10:    #<-- 당연히 실행 안됨.
             print('5가 있습니다.')
+
+
+N, M = map(int, input().split())
+matrix = []
+
+for i in range(N):
+    numbers = list(map(int, input().split()))
+    matrix.append(numbers)
+# print(matrix)
+
+
+# for row in range(len(matrix)):
+for row in range(N):
+    # print(matrix[row])
+    # for col in range(len[matrix[0]]):
+    for col in range(M):
+        print(matrix[row][col])
+
+
+for col in range(len(matrix[0])):
+    for row in range(len(matrix)):
+        print(matrix[row][col])
