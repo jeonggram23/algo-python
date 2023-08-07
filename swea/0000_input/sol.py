@@ -1,33 +1,33 @@
 import sys
 sys.stdin = open('input.txt')
 
-# N = int(input())
+N = int(input())
 
-# if N % 2 == 1:
-#     print('홀수')
-# else:
-#     print('짝수')
+if N % 2 == 1:
+    print('홀수')
+else:
+    print('짝수')
 
 TC = int(input())
 
 for i in range(TC):
     N = int(input())
-
+    
     if N % 2 == 1:
         print('홀수')
     else:
         print('짝수')
 
-#1차원 리스트 input 받기  // 1 2 3 4 5
+# # 1차원 리스트 input 받기  // 1 2 3 4 5
 
-# numbers = input().split()
-# print(numbers)
+numbers = input().split()
+print(numbers)
 
-# for number in numbers:
-#     int_num = int(number)
+for number in numbers:
+    int_num = int(number)
     
-#     if int_num % 2 == 1:
-#         print(f'{int_num}은 홀수입니다.')
+    if int_num % 2 == 1:
+        print(f'{int_num}은 홀수입니다.')
 
 
 numbers =list(map(int, input().split())) #// 3
@@ -46,7 +46,7 @@ matrix = []
 for i in range(N):
     numbers = list(map(int, input().split()))
     matrix.append(numbers)
-    
+
 
 for row in matrix:
     # print(row)
@@ -64,7 +64,7 @@ matrix = []
 for i in range(N):
     numbers = list(map(int, input().split()))
     matrix.append(numbers)
-# print(matrix)
+print(matrix)
 
 
 # for row in range(len(matrix)):
