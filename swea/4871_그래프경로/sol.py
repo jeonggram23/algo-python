@@ -1,6 +1,7 @@
 #인접행렬방식으로 그래프를 표현
 import sys
 from pathlib import Path
+from pprint import pprint
 
 file_path = Path(__file__).parent
 input_path = file_path / 'input.txt'
@@ -19,9 +20,9 @@ for tc in range(1, T+1):
     # 간선의 갯수만큼 반복을 진행
     for line in range(E):
         start, end = list(map(int, input().split()))
+        # pprint(nodes)
 
         nodes[start][end] = 1
-    print(nodes)
 
     # S : 출발노드 / G : 도착노드
     S, G = list(map(int, input().split()))
@@ -56,5 +57,6 @@ for tc in range(1, T+1):
 
                     # 스택에 추가
                     stack.append(link)
-        
-    # print(result)
+        # 체크리스트 흔적
+        # print(check_list)
+    print(result)

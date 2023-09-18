@@ -1,5 +1,10 @@
 import sys
-sys.stdin = open('input.txt')
+from pathlib import Path
+
+file_path = Path(__file__).parent
+input_path = file_path / 'input.txt'
+sys.stdin = open(input_path)
+
 
 # T = int(input())
 
@@ -32,26 +37,43 @@ sys.stdin = open('input.txt')
 #     print(f'#{tc} {result}')
 
 
+# T = int(input())
+
+
+# for tc in range(1, T+1):
+
+#     N = int(input())
+
+#     a = list(map(int, input().split()))
+    
+#     t_max = max(a)
+#     t_min = min(a)
+
+#     print(t_max-t_min)
+
+# # result = []
+# # for _ in range(0, N-1):
+# #     print(_)
+#     # for t_max in a:
+#     #     print(t_max)
+#     # if result < t_max:
+#     #     result.append(t_max)
+
+# # print(result)
+
+
 T = int(input())
-
-
-for tc in range(1, T+1):
-
+for i in range(1, T+1):
     N = int(input())
 
-    a = list(map(int, input().split()))
-    
-    t_max = max(a)
-    t_min = min(a)
+    ai = list(map(int, input().split()))
 
-    print(t_max-t_min)
+    # ai.sort()
+    # for idx, num in enumerate(ai):
 
-# result = []
-# for _ in range(0, N-1):
-#     print(_)
-    # for t_max in a:
-    #     print(t_max)
-    # if result < t_max:
-    #     result.append(t_max)
+    minnum = min(ai)
+    maxnum = max(ai)
 
-# print(result)
+    print(maxnum-minnum)
+
+        

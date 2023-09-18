@@ -1,6 +1,9 @@
-# import sys
-# sys.stdin = open('input.txt')
+import sys
+from pathlib import Path
 
+file_path = Path(__file__).parent
+input_path = file_path / 'input.txt'
+sys.stdin = open(input_path)
 # T = int(input())
 
 # for tc in range(1, T+1):
@@ -37,8 +40,6 @@
 
 # 강사 입력
 
-import sys
-sys.stdin = open('input.txt')
 
 T = int(input())
 
@@ -52,22 +53,22 @@ for tc in range(1, T+1):
     # 구간합을 구하기 위한 i => 뒤의 M개의 데이터를 더하기 위한 시작점
     # index out of range 에러를 발생시키지 않기 위해
     for i in range(N-M+1):
-
+        print(i)
         total = 0
         # 시작점을 기준으로 오른쪽 M개를 구하기 위한 반복
         for j in range(M):
             total = total + numbers[i+j]
-            print(numbers[i:j])
+            # print(numbers[i:j])
         
-        if total < min_total:
-            min_total = total
+    #     if total < min_total:
+    #         min_total = total
 
-        if total > max_total:
-            max_total = total
+    #     if total > max_total:
+    #         max_total = total
 
-    result = max_total - min_total
+    # result = max_total - min_total
 
-    print(f'#{tc} {result}')
+    # print(f'#{tc} {result}')
 
 
 
